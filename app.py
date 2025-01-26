@@ -16,7 +16,7 @@ image = st.file_uploader("Upload an image (JPG/JPEG/PNG)...", type=["jpg", "jpeg
 
 # Prediction
 if image is not None:
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width =True)
     image = Image.open(image)
     image = ImageOps.grayscale(image)
     image = image.resize([96, 96])
